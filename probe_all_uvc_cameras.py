@@ -5,7 +5,7 @@
 SETTINGS = {
     # Backends: Windows DSHOW=700, MSMF=1400, ANY=0 | Linux V4L2=200, GST=180, ANY=0
     "WIN_BACKENDS": [2300, 1900, 1800, 700, 1400, 2000, 2200, 2500, 2600, 0],
-    "LIN_BACKENDS": [200, 180, 0],     # V4L2, GST, ANY
+    "LIN_BACKENDS": [1900, 1800, 2300, 200, 2000, 2200, 2500, 2600, 0],
 
     # Windows enumeration fallback (probe indices 0..N)
     "MAX_INDEX_GUESS": 6,
@@ -271,8 +271,6 @@ def main():
                     print(f"  [fail] rc={r.returncode}")
             except subprocess.TimeoutExpired:
                 print(" timeout; killed")
-            pass
-                print("  [passed] worker subrpocess yielded a frame")
         if not got:
             fails.append(ch); print(f"  [skip] channel {ch:03d} failed on all backends")
 
