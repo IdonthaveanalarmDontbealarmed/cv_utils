@@ -2,13 +2,16 @@ import cv2
 import os
 import shutil
 
-IN_FOLDER = r"d:\in"
-OUT_FOLDER = r"d:\out"
-SIDE_FOLDER = r"d:\side"
-AXERA_FOLDER = r"d:\axera"
+IN_FOLDER = r"D:\\Datasorted\\Dubious"
+OUT_FOLDER = r"d:\\Datasorted\\d1"
+SIDE_FOLDER = r"d:\\Datasorted\\d2"
+AXERA_FOLDER = r"d:\\Datasorted\\d3"
 # Make sure output folders exist
 os.makedirs(OUT_FOLDER, exist_ok=True)
 os.makedirs(SIDE_FOLDER, exist_ok=True)
+
+# Keyboard hint
+print("=== IMAGE SORTER CONTROLS ===\nd / →  : Next image\na / ←  : Previous image\nSPACE  : Copy to OUT (d1)\nS      : Copy to SIDE (d2)\nF      : Copy to AXERA (d3)\nESC    : Exit\n=============================")
 
 # Supported image extensions
 EXTENSIONS = {".jpg", ".jpeg", ".png", ".bmp", ".tiff", ".gif"}
